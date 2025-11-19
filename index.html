@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Novembro Azul: Campanha de conscientização sobre saúde masculina, prevenção e diagnóstico precoce do câncer de próstata.">
+  <meta property="og:title" content="Novembro Azul — Saúde Masculina">
+  <meta property="og:description" content="Informações essenciais sobre prevenção, sintomas e saúde do homem.">
+  <title>Novembro Azul — Saúde Masculina</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue-950: #031428;
+      --blue-900: #0a2d50;
+      --blue-850: #0a3f78;
+      --blue-800: #0b4fa1;
+      --blue-600: #1976d2;
+      --blue-400: #42a5f5;
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --muted: #50575c;
+      --text-dark: #1a1a1a;
+      --border: rgba(25,118,210,0.06);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+      --shadow-md: 0 6px 20px rgba(0,0,0,0.06);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.08);
+    }
+
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+      background:var(--bg);color:var(--text-dark);-webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;line-height:1.6;font-size:16px;
+    }
+
+    header{
+      background:linear-gradient(90deg,var(--blue-950) 0%,var(--blue-850) 100%);
+      color:white;padding:16px 24px;position:sticky;top:0;z-index:40;
+      box-shadow:0 4px 16px rgba(0,0,0,0.08);border-bottom:1px solid rgba(255,255,255,0.04);
+    }
+    .container{max-width:1150px;margin:0 auto;padding:0 20px}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:-0.5px;font-size:1.05rem;text-decoration:none;color:white;transition:opacity .2s}
+    .brand:hover{opacity:0.9}
+    .logo{width:44px;height:44px;display:inline-grid;place-items:center;border-radius:8px;background:rgba(255,255,255,0.08);flex-shrink:0}
+    .logo svg{opacity:0.98;transition:transform .3s}
+    .nav-links{display:flex;gap:12px;list-style:none;margin:0;padding:0}
+    .nav-links a{
+      color:rgba(255,255,255,0.95);text-decoration:none;padding:9px 14px;
+      border-radius:8px;font-weight:600;font-size:0.95rem;transition:all .18s;
+      border:1px solid transparent;
+    }
+    .nav-links a:hover{background:rgba(255,255,255,0.08);transform:translateY(-2px)}
+    .nav-links a:focus{outline:2px solid rgba(255,255,255,0.3);outline-offset:2px}
+
+    main{padding:56px 0}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:36px;align-items:center;margin-bottom:32px}
+    .card{
+      background:var(--card);border-radius:14px;padding:28px;
+      box-shadow:var(--shadow-md);border:1px solid var(--border);
+      animation:fadeInUp .6s ease-out;
+    }
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+    .hero h1{font-size:2.1rem;margin:0 0 14px;color:var(--text-dark);font-weight:800;line-height:1.3}
+    .hero p{margin:0 0 20px;color:var(--muted);font-size:1.05rem;line-height:1.65}
+
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{
+      background:linear-gradient(135deg,var(--blue-600) 0%,var(--blue-800) 100%);
+      color:white;padding:12px 18px;border-radius:10px;border:0;font-weight:800;
+      text-decoration:none;display:inline-block;cursor:pointer;
+      box-shadow:0 8px 24px rgba(25,118,210,0.16);
+      transition:all .2s;font-size:0.95rem;
+    }
+    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(25,118,210,0.22)}
+    .btn-primary:focus{outline:2px solid rgba(25,118,210,0.4);outline-offset:2px}
+    .btn-primary:active{transform:translateY(-1px)}
+
+    .btn-ghost{
+      background:transparent;color:var(--blue-800);padding:11px 16px;
+      border-radius:10px;border:1.5px solid rgba(11,79,161,0.12);font-weight:700;
+      text-decoration:none;display:inline-block;cursor:pointer;transition:all .2s;
+    }
+    .btn-ghost:hover{background:rgba(25,118,210,0.04);border-color:rgba(11,79,161,0.2);transform:translateY(-2px)}
+    .btn-ghost:focus{outline:2px solid rgba(11,79,161,0.2);outline-offset:2px}
+
+    .ribbon-wrap{display:flex;justify-content:center;animation:fadeInUp .8s ease-out}
+    .ribbon{
+      width:220px;height:180px;border-radius:14px;
+      background:linear-gradient(180deg,var(--blue-800) 0%,var(--blue-600) 100%);
+      display:flex;align-items:center;justify-content:center;color:white;
+      box-shadow:0 8px 32px rgba(11,79,161,0.10);border:1px solid rgba(255,255,255,0.06);
+      transition:transform .22s ease, box-shadow .22s ease;
+    }
+    .ribbon:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(11,79,161,0.12)}
+    .ribbon svg{width:120px;height:120px;filter:drop-shadow(0 6px 18px rgba(2,24,50,0.08))}
+
+    section{margin-top:24px;animation:fadeInUp .7s ease-out}
+    section h2{font-size:1.6rem;margin:0 0 10px;color:var(--text-dark);font-weight:800}
+    section > .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:18px}
+
+    .grid-item{display:grid;gap:8px}
+    .grid-item h3{font-size:1.15rem;margin:0;color:var(--text-dark);font-weight:700}
+    .grid-item p{margin:0;color:var(--muted);font-size:0.95rem;line-height:1.6}
+
+    .muted{color:var(--muted)}
+
+    footer{padding:32px 0;color:var(--muted);font-size:0.95rem;border-top:1px solid var(--border);margin-top:40px}
+    footer .card{padding:24px}
+    footer p{margin:0;line-height:1.7}
+
+    details{border:1px solid var(--border);border-radius:10px;padding:16px;cursor:pointer}
+    details summary{font-weight:700;color:var(--text-dark);cursor:pointer;user-select:none}
+    details > p{margin:12px 0 0;color:var(--muted)}
+    details[open] > summary{color:var(--blue-600)}
+
+    /* Responsive */
+    @media (max-width:1024px){
+      .hero{grid-template-columns:1fr;gap:24px}
+      .ribbon{width:200px;height:200px}
+      .ribbon svg{width:110px;height:110px}
+    }
+
+    @media (max-width:768px){
+      header{padding:12px 16px}
+      .brand{font-size:0.95rem}
+      .nav-links{display:none}
+      main{padding:36px 0}
+      .hero h1{font-size:1.7rem}
+      .hero p{font-size:0.95rem}
+      .cta{gap:8px}
+      .btn-primary, .btn-ghost{padding:10px 14px;font-size:0.9rem}
+      section > .grid{grid-template-columns:1fr;gap:14px}
+      section h2{font-size:1.3rem}
+      footer{padding:20px 0;margin-top:28px}
+    }
+
+    .lang-selector{display:flex;gap:8px;list-style:none;margin:0;padding:0}
+    .lang-selector button{
+      background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.9);border:1px solid rgba(255,255,255,0.2);
+      padding:6px 10px;border-radius:6px;cursor:pointer;font-weight:600;font-size:0.85rem;
+      transition:all .18s;
+    }
+    .lang-selector button:hover{background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.3)}
+    .lang-selector button.active{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
+
+    @media (prefers-reduced-motion:reduce){
+      *{animation:none !important;transition:none !important}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="brand">
+          <div class="logo" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C8.1 2 5 6 5 10.5c0 3.6 2.3 6.4 5.5 7.9L12 20l1.5-1.6C16.7 16.9 19 14.1 19 10.5 19 6 15.9 2 12 2z" fill="white" opacity="0.14"/>
+              <path d="M12 6.2c-2.2 0-4 2.1-4 4.3 0 2 1.3 3.7 3.3 4.3l.7.25.7-.25c2-0.6 3.3-2.3 3.3-4.3 0-2.2-1.8-4.3-4-4.3z" fill="white"/>
+            </svg>
+          </div>
+          Novembro Azul
+        </a>
+        <div style="display:flex;align-items:center;gap:24px">
+          <ul class="nav-links">
+            <li><a href="sintomas.html" data-i18n="sintomas">Sintomas</a></li>
+            <li><a href="prevencao.html" data-i18n="prevencao">Prevenção</a></li>
+          </ul>
+          <ul class="lang-selector">
+            <li><button onclick="setLanguage('pt')" class="lang-btn active" data-lang="pt">PT</button></li>
+            <li><button onclick="setLanguage('en')" class="lang-btn" data-lang="en">EN</button></li>
+            <li><button onclick="setLanguage('fr')" class="lang-btn" data-lang="fr">FR</button></li>
+            <li><button onclick="setLanguage('de')" class="lang-btn" data-lang="de">DE</button></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <div>
+        <div class="card">
+          <h1 data-i18n="heroTitle">Prevenção e Saúde Masculina</h1>
+          <p class="muted" data-i18n="heroDesc">Novembro Azul é uma campanha dedicada à conscientização sobre o câncer de próstata e saúde integral do homem. Compreender sintomas, fatores de risco e opções de prevenção é fundamental para um futuro mais saudável.</p>
+          <div class="cta">
+            <a class="btn-primary" href="prevencao.html" data-i18n="btnPrevencao">Prevenção & Exames</a>
+            <a class="btn-ghost" href="sintomas.html" data-i18n="btnSintomas">Conhecer Sintomas</a>
+          </div>
+        </div>
+
+        <section id="destaque">
+          <div class="card">
+            <h2 style="margin-top:0" data-i18n="whyNovembroAzul">Por que Novembro Azul?</h2>
+            <p class="muted" data-i18n="whyDesc">O câncer de próstata é o segundo mais comum em homens. Diagnóstico precoce aumenta significativamente as chances de sucesso no tratamento. A conscientização salva vidas.</p>
+            <ul style="color:var(--muted);margin:12px 0;padding-left:20px">
+              <li data-i18n="stat1">1 em 9 homens receberá diagnóstico de câncer de próstata</li>
+              <li data-i18n="stat2">Diagnóstico precoce aumenta taxa de cura para 99%</li>
+              <li data-i18n="stat3">Conversas abertas sobre saúde são essenciais</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <div class="ribbon-wrap">
+        <img src="laço.png" alt="Laço azul — Novembro Azul" style="width: 220px;height:auto;filter:drop-shadow(0 8px 24px rgba(11,79,161,0.16))">
+      </div>
+    </div>
+
+    <section id="info">
+      <h2 data-i18n="infoTitle">Informações Essenciais</h2>
+      <div class="grid">
+        <div class="card grid-item">
+          <h3>🩺 <span data-i18n="cardSintomas">Sintomas</span></h3>
+          <p data-i18n="cardSintomasDesc">Conheça os sinais de alerta e quando procurar ajuda médica. Nem todos apresentam sintomas precocemente.</p>
+          <a href="sintomas.html" class="btn-ghost" style="align-self:start;margin-top:8px" data-i18n="cardSintomasBtn">Saiba Mais</a>
+        </div>
+        <div class="card grid-item">
+          <h3>🔬 <span data-i18n="cardExames">Exames</span></h3>
+          <p data-i18n="cardExamesDesc">PSA e toque retal são ferramentas importantes. Discuta com seu médico a melhor estratégia para você.</p>
+          <a href="prevencao.html" class="btn-ghost" style="align-self:start;margin-top:8px" data-i18n="cardExamesBtn">Conhecer</a>
+        </div>
+        <div class="card grid-item">
+          <h3>❤️ <span data-i18n="cardPrevencao">Prevenção</span></h3>
+          <p data-i18n="cardPrevencaoDesc">Hábitos saudáveis, exercício regular e nutrição equilibrada contribuem para a saúde geral.</p>
+          <a href="prevencao.html" class="btn-ghost" style="align-self:start;margin-top:8px" data-i18n="cardPrevencaoBtn">Explorar</a>
+        </div>
+        <div class="card grid-item">
+          <h3>👨‍⚕️ <span data-i18n="cardProfissionais">Profissionais</span></h3>
+          <p data-i18n="cardProfissionaisDesc">Procure urologista ou clínico geral. Muitos municípios oferecem campanhas e orientações gratuitas.</p>
+          <a href="prevencao.html" class="btn-ghost" style="align-self:start;margin-top:8px" data-i18n="cardProfissionaisBtn">Recursos</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2 data-i18n="faqTitle">Dúvidas Frequentes</h2>
+      <div style="display:grid;gap:16px;margin-top:18px">
+        <details open>
+          <summary data-i18n="faq1Title">Como começa o câncer de próstata?</summary>
+          <p data-i18n="faq1Desc">A próstata é uma glândula do sistema reprodutor masculino. O câncer se desenvolve quando as células crescem descontroladamente. Fatores genéticos, idade e hormônios influenciam o risco.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq2Title">Qual é a diferença entre PSA alto e câncer?</summary>
+          <p data-i18n="faq2Desc">PSA elevado não significa câncer. Inflamação, infecção ou próstata aumentada também elevam PSA. Só o médico pode avaliar corretamente o resultado.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq3Title">A que idade devo começar a me preocupar?</summary>
+          <p data-i18n="faq3Desc">Risco aumenta após 50 anos. Para homens com história familiar ou ascendência africana, discussão com médico é recomendada a partir dos 45 anos.</p>
+        </details>
+      </div>
+    </section>
+
+    <footer>
+      <div class="card">
+        <p><strong data-i18n="footerTitle">Novembro Azul — Saúde Masculina</strong></p>
+        <p style="margin:8px 0 0;font-size:0.9rem" data-i18n="footerNote">Este site contém informações gerais e educacionais. Não substitui consulta profissional. Procure um médico para orientação personalizada.</p>
+        <p style="margin:12px 0 0;font-size:0.85rem"><span data-i18n="footerCopy">© 2025 Novembro Azul</span> | <a href="https://www.inca.gov.br" target="_blank" style="color:var(--blue-600);text-decoration:none">INCA</a> | <a href="https://www.gov.br/saude" target="_blank" style="color:var(--blue-600);text-decoration:none">Ministério da Saúde</a></p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    let currentLang = localStorage.getItem('lang') || 'pt';
+    let translations = {};
+
+    // Carregar traduções
+    fetch('translations.json')
+      .then(r => r.json())
+      .then(data => {
+        translations = data;
+        setLanguage(currentLang, false);
+      });
+
+    function setLanguage(lang, save = true) {
+      currentLang = lang;
+      if (save) localStorage.setItem('lang', lang);
+      
+      // Atualizar atributo lang do HTML
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+      
+      // Atualizar botões
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+
+      // Traduzir elementos
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+  </script>
+  <script src="whatsapp-widget.js"></script>
+</body>
+</html>

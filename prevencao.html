@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Prevenção e exames para câncer de próstata: PSA, rastreamento e hábitos saudáveis.">
+  <title>Prevenção & Exames — Novembro Azul</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue-950: #031428;
+      --blue-900: #0a2d50;
+      --blue-850: #0a3f78;
+      --blue-800: #0b4fa1;
+      --blue-600: #1976d2;
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --muted: #50575c;
+      --text-dark: #1a1a1a;
+      --border: rgba(25,118,210,0.06);
+      --shadow-md: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+      background:var(--bg);color:var(--text-dark);-webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;line-height:1.6;font-size:16px;
+    }
+
+    header{
+      background:linear-gradient(90deg,var(--blue-950) 0%,var(--blue-850) 100%);
+      color:white;padding:16px 24px;position:sticky;top:0;z-index:40;
+      box-shadow:0 4px 16px rgba(0,0,0,0.08);border-bottom:1px solid rgba(255,255,255,0.04);
+    }
+    .container{max-width:1150px;margin:0 auto;padding:0 20px}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:-0.5px;font-size:1.05rem;text-decoration:none;color:white;transition:opacity .2s}
+    .brand:hover{opacity:0.9}
+    .logo{width:44px;height:44px;display:inline-grid;place-items:center;border-radius:8px;background:rgba(255,255,255,0.08);flex-shrink:0}
+    .nav-links{display:flex;gap:12px;list-style:none;margin:0;padding:0}
+    .nav-links a{
+      color:rgba(255,255,255,0.95);text-decoration:none;padding:9px 14px;
+      border-radius:8px;font-weight:600;font-size:0.95rem;transition:all .18s;
+    }
+    .nav-links a:hover{background:rgba(255,255,255,0.08);transform:translateY(-2px)}
+    
+    .lang-selector{display:flex;gap:8px;list-style:none;margin:0;padding:0}
+    .lang-selector button{
+      background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.9);border:1px solid rgba(255,255,255,0.2);
+      padding:6px 10px;border-radius:6px;cursor:pointer;font-weight:600;font-size:0.85rem;
+      transition:all .18s;
+    }
+    .lang-selector button:hover{background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.3)}
+    .lang-selector button.active{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
+
+    main{padding:44px 0}
+    .card{
+      background:var(--card);border-radius:14px;padding:28px;
+      box-shadow:var(--shadow-md);border:1px solid var(--border);
+    }
+    h1{font-size:1.9rem;margin:0 0 12px;color:var(--text-dark);font-weight:800}
+    h2{font-size:1.4rem;margin:24px 0 12px;color:var(--text-dark);font-weight:800}
+    h3{font-size:1.1rem;margin:16px 0 8px;color:var(--text-dark);font-weight:700}
+    p{margin:0 0 12px;color:var(--muted);line-height:1.65}
+    ul{color:var(--muted);margin:12px 0;padding-left:20px;line-height:1.7}
+    li{margin:6px 0}
+    a{color:var(--blue-600);text-decoration:none;transition:opacity .2s}
+    a:hover{opacity:0.8}
+
+    .btn-ghost{
+      background:transparent;color:var(--blue-800);padding:10px 14px;
+      border-radius:10px;border:1.5px solid rgba(11,79,161,0.12);font-weight:700;
+      text-decoration:none;display:inline-block;cursor:pointer;transition:all .2s;
+      font-size:0.95rem;
+    }
+    .btn-ghost:hover{background:rgba(25,118,210,0.04);border-color:rgba(11,79,161,0.2);transform:translateY(-2px)}
+
+    .info-box{
+      background:rgba(25,118,210,0.04);border-left:4px solid var(--blue-600);padding:16px;
+      border-radius:8px;margin:16px 0;color:var(--muted);
+    }
+
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:16px 0}
+
+    footer{padding:32px 0;color:var(--muted);font-size:0.95rem;border-top:1px solid var(--border);margin-top:40px}
+    footer .card{padding:24px;margin-bottom:0}
+
+    @media (max-width:768px){
+      header{padding:12px 16px}
+      .brand{font-size:0.95rem}
+      .nav-links{display:none}
+      main{padding:28px 0}
+      h1{font-size:1.5rem}
+      h2{font-size:1.2rem}
+      .card{padding:20px}
+      .grid-2{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="brand">
+          <div class="logo" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C8.1 2 5 6 5 10.5c0 3.6 2.3 6.4 5.5 7.9L12 20l1.5-1.6C16.7 16.9 19 14.1 19 10.5 19 6 15.9 2 12 2z" fill="white" opacity="0.14"/>
+              <path d="M12 6.2c-2.2 0-4 2.1-4 4.3 0 2 1.3 3.7 3.3 4.3l.7.25.7-.25c2-0.6 3.3-2.3 3.3-4.3 0-2.2-1.8-4.3-4-4.3z" fill="white"/>
+            </svg>
+          </div>
+          Novembro Azul
+        </a>
+        <div style="display:flex;align-items:center;gap:24px">
+          <ul class="nav-links">
+            <li><a href="index.html" data-i18n="inicio">Início</a></li>
+            <li><a href="sintomas.html" data-i18n="sintomas">Sintomas</a></li>
+          </ul>
+          <ul class="lang-selector">
+            <li><button onclick="setLanguage('pt')" class="lang-btn active" data-lang="pt">PT</button></li>
+            <li><button onclick="setLanguage('en')" class="lang-btn" data-lang="en">EN</button></li>
+            <li><button onclick="setLanguage('fr')" class="lang-btn" data-lang="fr">FR</button></li>
+            <li><button onclick="setLanguage('de')" class="lang-btn" data-lang="de">DE</button></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h1>Prevenção, Rastreamento e Exames</h1>
+      <p>A prevenção do câncer de próstata envolve informação, hábitos saudáveis e, quando indicado, rastreamento através de exames. A decisão sobre rastreamento deve ser personalizada em diálogo com seu médico.</p>
+
+      <h2>Fatores de Risco</h2>
+      <p>Compreender seus fatores de risco ajuda na decisão sobre rastreamento:</p>
+      <ul>
+        <li><strong>Idade:</strong> risco aumenta significativamente após 50 anos;</li>
+        <li><strong>História familiar:</strong> ter pai, avô ou irmão com câncer de próstata aumenta risco;</li>
+        <li><strong>Ascendência africana:</strong> estudos mostram incidência mais elevada nesse grupo;</li>
+        <li><strong>Genética:</strong> mutações em genes como BRCA1 e BRCA2 aumentam susceptibilidade;</li>
+        <li><strong>Fatores de estilo de vida:</strong> obesidade e inatividade podem elevar risco.</li>
+      </ul>
+
+      <h2>Exames de Rastreamento</h2>
+
+      <h3>PSA (Antígeno Prostático Específico)</h3>
+      <p>O PSA é uma proteína produzida pela próstata. Um exame de sangue mede seus níveis:</p>
+      <ul>
+        <li><strong>O que é:</strong> proteína marcadora para alterações na próstata;</li>
+        <li><strong>Valor referência:</strong> geralmente menores que 4 ng/mL são considerados normais;</li>
+        <li><strong>Interpretação:</strong> PSA elevado não significa câncer — pode indicar inflamação, infecção ou hiperplasia benigna;</li>
+        <li><strong>Limitações:</strong> alguns cânceres não elevam PSA; alguns aumentos não indicam câncer.</li>
+      </ul>
+
+      <div class="info-box">
+        <strong>💡 Ponto importante:</strong> PSA é uma ferramenta, não um diagnóstico. Seu médico avaliará o resultado no contexto clínico completo.
+      </div>
+
+      <h3>Toque Retal</h3>
+      <p>Exame realizado por urologista onde é feita avaliação física da próstata:</p>
+      <ul>
+        <li><strong>Como funciona:</strong> o médico insere um dedo (com luva) no reto para sentir a próstata;</li>
+        <li><strong>O que procura:</strong> alterações de textura, dureza ou nódulos;</li>
+        <li><strong>Duração:</strong> alguns minutos, procedimento rápido;</li>
+        <li><strong>Importância:</strong> complementa o PSA, detectando alterações palpáveis.</li>
+      </ul>
+
+      <h3>Outros Exames</h3>
+      <ul>
+        <li><strong>Ultrassom Transretal:</strong> imagem detalhada da próstata para investigar achados suspeitos;</li>
+        <li><strong>Biópsia:</strong> coleta de tecido para análise histológica — realizada se PSA/exame indicam necessidade;</li>
+        <li><strong>Ressonância Magnética:</strong> imagem de alta definição para avaliar extensão de doença;</li>
+        <li><strong>Cintilografia Óssea:</strong> em casos avançados, para detectar metástases.</li>
+      </ul>
+
+      <h2>Quem Deve Realizar Rastreamento?</h2>
+      <div class="grid-2">
+        <div style="background:rgba(25,118,210,0.04);padding:14px;border-radius:8px;border-left:3px solid var(--blue-600)">
+          <strong>Sem fatores de risco:</strong>
+          <p style="margin:6px 0 0">Discussão com médico a partir dos 50 anos sobre benefícios e riscos de rastreamento.</p>
+        </div>
+        <div style="background:rgba(25,118,210,0.04);padding:14px;border-radius:8px;border-left:3px solid var(--blue-600)">
+          <strong>Com fatores de risco:</strong>
+          <p style="margin:6px 0 0">Considerar rastreamento a partir dos 45 anos (história familiar, ascendência africana).</p>
+        </div>
+      </div>
+
+      <h2>Prevenção através de Hábitos Saudáveis</h2>
+      <p>Estudos sugerem que certas mudanças no estilo de vida podem reduzir risco ou retardar progressão:</p>
+      <ul>
+        <li><strong>Alimentação balanceada:</strong> rica em frutas, verduras, grãos integrais e legumes;</li>
+        <li><strong>Tomate e licopeno:</strong> estudos mostram possível proteção (tomate, goiaba);</li>
+        <li><strong>Gorduras saudáveis:</strong> preferir ômega-3, evitar gorduras saturadas;</li>
+        <li><strong>Exercício regular:</strong> mínimo 150 minutos de atividade moderada por semana;</li>
+        <li><strong>Peso saudável:</strong> manter IMC dentro da faixa recomendada (18,5-24,9);</li>
+        <li><strong>Evitar tabaco e álcool excessivo;</strong></li>
+        <li><strong>Saúde mental:</strong> reduzir estresse através de meditação, yoga ou atividades prazerosas;</li>
+        <li><strong>Sono adequado:</strong> 7-9 horas por noite melhoram imunidade.</li>
+      </ul>
+
+      <h2>Medicações Preventivas</h2>
+      <p>Alguns medicamentos podem reduzir risco ou progressão em certos casos:</p>
+      <ul>
+        <li><strong>Finasterida (Proscar):</strong> bloqueador de DHT que pode reduzir risco em homens com PSA elevado;</li>
+        <li><strong>Dutasterida (Avodart):</strong> similar, com estudos mostrando redução de até 25% em risco;</li>
+        <li><strong>Indicação:</strong> uso deve ser decidido com médico considerando benefícios e efeitos colaterais.</li>
+      </ul>
+
+      <h2>Quando Procurar Seu Médico</h2>
+      <ul>
+        <li>Se tem 50 anos ou mais (45+ se com fatores de risco);</li>
+        <li>Se tem história familiar de câncer de próstata;</li>
+        <li>Se apresenta sintomas urinários ou sexuais novos;</li>
+        <li>Para orientação personalizada sobre rastreamento.</li>
+      </ul>
+
+      <h2>Recursos Disponíveis</h2>
+      <ul>
+        <li><a href="https://www.inca.gov.br" target="_blank">INCA — Instituto Nacional de Câncer</a> — informações confiáveis sobre prevenção;</li>
+        <li><a href="https://www.gov.br/saude/pt-br" target="_blank">Ministério da Saúde</a> — políticas de saúde e campanhas;</li>
+        <li>Secretarías de Saúde Municipal — muitas oferecem campanhas e exames gratuitos em novembro;</li>
+        <li>UBS (Unidades Básicas de Saúde) — atendimento e encaminhamentos.</li>
+      </ul>
+
+      <p style="margin-top:24px">
+        <a class="btn-ghost" href="sintomas.html">Conhecer Sintomas</a>
+        <a class="btn-ghost" href="index.html" style="margin-left:8px">Voltar ao Início</a>
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="card">
+        <p><strong>Informações Gerais</strong></p>
+        <p style="margin:8px 0 0;font-size:0.9rem">Este conteúdo é educacional. Recomendações sobre rastreamento devem ser individualizadas com seu médico. Não substitui avaliação e orientação profissional.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let currentLang = localStorage.getItem('lang') || 'pt';
+    let translations = {};
+
+    // Carregar traduções
+    fetch('translations.json')
+      .then(r => r.json())
+      .then(data => {
+        translations = data;
+        setLanguage(currentLang, false);
+      });
+
+    function setLanguage(lang, save = true) {
+      currentLang = lang;
+      if (save) localStorage.setItem('lang', lang);
+      
+      // Atualizar atributo lang do HTML
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+      
+      // Atualizar botões
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+
+      // Traduzir elementos
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+  </script>
+  <script src="whatsapp-widget.js"></script>
+</body>
+</html>

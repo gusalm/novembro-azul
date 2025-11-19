@@ -1,0 +1,16 @@
+{
+  "name": "novembro-azul",
+  "version": "1.0.0",
+  "description": "Campanha Novembro Azul - Conscientização sobre Saúde do Homem",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["saude", "novembro-azul", "prevencao"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
